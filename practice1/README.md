@@ -1,8 +1,4 @@
-# practice1
+## practice 1 - Flutter Official Tutorial
+Write Your First Flutter App, part 1 & 2
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1/ https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/
