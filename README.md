@@ -10,3 +10,8 @@ Write Your First Flutter App, part 1 & 2
 Building Beautiful UIs with Flutter
 
 <https://codelabs.developers.google.com/codelabs/flutter>
+
+### practice 3 - Flutter Official Tutorial
+Firebase for Flutter
+
+<https://codelabs.developers.google.com/codelabs/flutter-firebase>

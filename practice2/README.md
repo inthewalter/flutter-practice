@@ -1,8 +1,4 @@
-# practice2
+# practice 2 - Flutter Official Tutorial
+Building Beautiful UIs with Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+https://codelabs.developers.google.com/codelabs/flutter
