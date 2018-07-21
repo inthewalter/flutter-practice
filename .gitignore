@@ -10,5 +10,4 @@ build/
 
 .flutter-plugins
 
-
-make_it_rain
+google-services.json
