@@ -8,14 +8,31 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
+  final TextEditingController _weightController = new TextEditingController();
   int radioValue = 0;
+  double _finalResult = 0.0;
+  String _formattedText = "";
 
   void _handleRadioValueChanged(int value) {
     setState(() {
       radioValue = value;
-      print(radioValue);
-    });
-  }
+
+      switch (radioValue) {
+        case 0:
+          _finalResult = calculateWeight(_weightController.text, 0.06); // Pluto
+          _formattedText = "Your weight on Pluto is ${_finalResult.toStringAsFixed(1)}";
+          break;
+        case 1:
+          _finalResult = calculateWeight(_weightController.text, 0.38); // Mars
+          _formattedText = "Your weight on Mars is ${_finalResult.toStringAsFixed(1)}";
+          break;
+        case 2:
+          _finalResult = calculateWeight(_weightController.text, 0.91); // Venus
+          _formattedText = "Your weight on Venus is ${_finalResult.toStringAsFixed(1)}";
+          break;
+      } // switch
+    }); // setState
+  } // _handleRadioValueChanged
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +61,7 @@ class HomeState extends State<Home> {
                 child: new Column(
                   children: <Widget>[
                     new TextField(
-                      controller: null,
+                      controller: _weightController,
                       keyboardType: TextInputType.number,
                       decoration: new InputDecoration(
                         labelText: 'Your Weight on Earth',
@@ -96,7 +113,7 @@ class HomeState extends State<Home> {
                     ),
                     new Padding(padding: new EdgeInsets.all(15.6)),
                     new Text(
-                      "Hello There",
+                      _weightController.text.isEmpty ? "Please enter weight" : _formattedText + "lbs",
                       style: new TextStyle(
                         color: Colors.white,
                         fontSize: 19.4,
@@ -109,5 +126,14 @@ class HomeState extends State<Home> {
         ),
       ),
     );
+  }
+
+  double calculateWeight (String weight, double multiplier) {
+    if (int.parse(weight).toString().isNotEmpty && int.parse(weight) > 0)
+      return int.parse(weight) * multiplier;
+    else {
+      print("Wrong!");
+      return int.parse("180") * 0.38;
+    }
   }
 }
