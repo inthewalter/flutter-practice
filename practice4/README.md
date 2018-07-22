@@ -1,8 +1,5 @@
-# practice4
+# practice 4 - Udemy Flutter & Dart - The Complete Flutter App Development Course
+Build The Weight On Planet X App
 
-A new Flutter project.
+<https://www.udemy.com/flutter-dart-the-complete-flutter-app-development-course/learn/v4/overview>
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
